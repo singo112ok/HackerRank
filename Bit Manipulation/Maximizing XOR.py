@@ -2,6 +2,11 @@
 
 #!/bin/python3
 
+# 간만에 쉬운거푸니 속이 다 편안하다
+# 이거도 무슨 공식이 있을까 이중포문돌리면 타임아웃나지 않을까
+# 노심초사했는데 일단 패스 ㅎㅎ
+
+
 import math
 import os
 import random
@@ -11,9 +16,8 @@ import sys
 # Complete the maximizingXor function below.
 def maximizingXor(l, r):
     nMaxVal = 0
-    for i in range(l, r):
-        # for j in range(i, r-i+l+1):
-        for j in range(i,r):
+    for i in range(l, r+1):
+        for j in range(i,r+1):
             if i^j > nMaxVal:
                 nMaxVal = i^j
     return nMaxVal
